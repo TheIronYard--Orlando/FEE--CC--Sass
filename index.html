@@ -19,11 +19,10 @@
     <div class="blog-masthead">
       <div class="container">
         <nav class="blog-nav">
-          <a class="blog-nav-item active" href="#">Home</a>
-          <a class="blog-nav-item" href="#">New features</a>
-          <a class="blog-nav-item" href="#">Press</a>
-          <a class="blog-nav-item" href="#">New hires</a>
-          <a class="blog-nav-item" href="#">About</a>
+          <a class="blog-nav-item active" href="index.html">Home</a>
+          <a class="blog-nav-item" href="http://theironyard.com/locations/orlando/">The Iron Yard</a>
+          <a class="blog-nav-item" href="http://www.meetup.com/The-Iron-Yard-Orlando/">Future Crash Courses</a>
+          <a class="blog-nav-item" href="https://github.com/TheIronYard--Orlando/FEE--CC--Sass">This Course on GitHub</a>
         </nav>
       </div>
     </div>
@@ -45,7 +44,7 @@
             <p>There are several tools I'm going to rely on during this presentation. About half of them are tools to install the other tools. If you have these already, don't just rest on your laurels (if you even remembered to bring your laurels) - find someone who's installing things and offer a hand. If you are seeing these tools for the first time tonight, you're in for a treat - these goodies are going to save you hours, and let you do some really cool stuff!</p>
             <aside>
               <h3>A Note for Windows Users</h3>
-              <p>I don't know how to install things on Windows any more; there's a package manager called <a href="https://chocolatey.org">chocolatey</a> but I've never used it. If you have a Windows machine, I advise you to use <a href="https://c9.io">Cloud 9</a> for the duration of this course. That environment has Node.js, npm, Git, and Bower pre-installed, which also makes Homebrew and Homebrew Cask superfluous.</p>
+              <p>I don't know how to install things on Windows any more; there's a package manager called <a href="https://chocolatey.org">chocolatey</a> but I've never used it. If you have a Windows machine, I advise you to use <a href="https://c9.io">Cloud 9</a> for the duration of this course. Follow the instructions in this link to <a href="https://docs.c9.io/v1.0/docs/create-a-workspace">create a workspace</a>, and in the box labeled "Clone from Git or Mercurial URL", paste the following: <strong>https://github.com/TheIronYard--Orlando/FEE--CC--Sass.git</strong>. The Cloud 9 environment has Node.js, npm, Git, and Bower pre-installed, which also makes Homebrew and Homebrew Cask superfluous.</p>
             </aside>
             <hr>
             <h2>Homebrew</h2>
@@ -97,28 +96,21 @@
             <p>To confirm that you have node-sass installed, without being bothered about all the dependencies that were installed with it, type</p>
             <code>npm ls --depth=0</code>
             <hr>
-            <h3>Npm Packages</h3>
-            <p class="blog-post-meta">Not the sandwich one. Do the sandwich one on your own time.</p>
-            <h4>node-sass</h4>
-          </div><!-- /.blog-post -->
-
-          <div class="blog-post">
-            <h2 class="blog-post-title">Another blog post</h2>
-            <p class="blog-post-meta">December 23, 2013 by <a href="#">Jacob</a></p>
-
-          </div><!-- /.blog-post -->
-
-          <div class="blog-post">
-            <h2 class="blog-post-title">New feature</h2>
-            <p class="blog-post-meta">December 14, 2013 by <a href="#">Chris</a></p>
-
-            <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+            <h2>The project files</h2>
+            <p class="blog-post-meta">Back in my day, students had to type everything themselves. We spoil you.</p>
+            <p>You can get copies of the files I'm working on in two ways.</p>
+            <ol>
+              <li><strong>GitHub</strong>: If you have a Mac with all the above software installed, you can clone the repository at <a href="https://github.com/TheIronYard--Orlando/FEE--CC--Sass.git">https://github.com/TheIronYard--Orlando/FEE--CC--Sass.git</a>.</li>
+              <li><strong>Cloud 9</strong>: If you are following along with Cloud 9, you can follow the instructions in this link to <a href="https://docs.c9.io/v1.0/docs/create-a-workspace">create a workspace</a>. Copy the GitHub link above into the box labeled "Clone from Git or Mercurial URL". Yes, these are the same instructions in the note to Windows users at the top of this page.</li>
+            </ol>
+            <p>Verify that the project files are as they should be by opening index.html in a browser. It should look like...well, like this.</p>
+            <hr>
           </div><!-- /.blog-post -->
 
           <nav>
             <ul class="pager">
               <li><a href="#">Previous</a></li>
-              <li><a href="#">Next</a></li>
+              <li><a href="2-simplest-sass.html">No more install! Sass!</a></li>
             </ul>
           </nav>
 
@@ -148,11 +140,11 @@
             </ol>
           </div>
           <div class="sidebar-module">
-            <h4>Elsewhere</h4>
+            <h4>Social Media</h4>
             <ol class="list-unstyled">
-              <li><a href="#">GitHub</a></li>
-              <li><a href="#">Twitter</a></li>
-              <li><a href="#">Facebook</a></li>
+              <li><a href="https://twitter.com/theironyard">Twitter</a></li>
+              <li><a href="https://twitter.com/susannajmiller">Our CD Uses Twitter Too</a></li>
+              <li><a href="https://www.facebook.com/The-Iron-Yard-Orlando-1527266594153803/">Facebook</a></li>
             </ol>
           </div>
         </div><!-- /.blog-sidebar -->
@@ -163,7 +155,7 @@
 
     <footer class="blog-footer">
       <p>Blog template built for <a href="http://getbootstrap.com/">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
-      <p>Content for the Sass Crash Course at <a href="http://theironyard.com/">The Iron Yard Orlando</a> by <a href="https://twitter.com/tweetwithbgates">Brian Gates</a>.</p>
+      <p>Content for the Sass Crash Course at <a href="http://theironyard.com/locations/orlando">The Iron Yard Orlando</a> by <a href="https://twitter.com/tweetwithbgates">Brian Gates</a>.</p>
       <p>
         <a href="#">Back to top</a>
       </p>
