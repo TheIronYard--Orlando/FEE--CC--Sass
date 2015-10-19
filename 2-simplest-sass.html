@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="http://getbootstrap.com/favicon.ico">
+    <title>Blog Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="./css/blog.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="blog-masthead">
+      <div class="container">
+        <nav class="blog-nav">
+          <a class="blog-nav-item active" href="index.html">Home</a>
+          <a class="blog-nav-item" href="http://theironyard.com/locations/orlando/">The Iron Yard</a>
+          <a class="blog-nav-item" href="http://www.meetup.com/The-Iron-Yard-Orlando/">Future Crash Courses</a>
+          <a class="blog-nav-item" href="https://github.com/TheIronYard--Orlando/FEE--CC--Sass">This Course on GitHub</a>
+        </nav>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="blog-header">
+        <h1 class="blog-title">Crash Sass</h1>
+        <p class="lead blog-description">That's Hard to Say.</p>
+      </div>
+
+      <div class="row">
+
+        <div class="col-sm-8 blog-main">
+
+          <div class="blog-post">
+            <h2>Your First Sass File</h2>
+            <p class="meta">The simplest thing</p>
+            <p>Make a new directory to hold your Sass files.</p>
+            <code>mkdir scss</code>
+            <p>Now move the CSS file this page is using, css/blog.css, into that directory.</p>
+            <code>mv css/blog.css scss/blog.scss</code>
+            <p>If you refresh the blog page in the browser, it will look...not great. There's some residual Bootstrap styling, but not much. Let's fix that. Regenerate the blog.css file using node-sass:</p>
+            <code>node-sass scss/blog.scss css/blog.scss</code>
+            <p>Now refresh the blog page <em>again</em>, and behold! We're back where we started!</p>
+            <h3>Why That Matters</h3>
+            <p>The point here is that Sass is a superset of CSS. That is, any valid CSS file (like the original blog.css) is also a valid Sass file (like blog.scss). That makes it easy to convert a project with existing CSS files into Sass, because they already fit in the Sass syntax.</p>
+            <p>Also, it's always a good idea to make sure simple things work before you try the real magic.</p>
+          </div><!-- /.blog-post -->
+
+          <div class="blog-post">
+            <h2>Indentation</h2>
+            <p class="meta">It's so much neater this way</p>
+
+            <p>If you look at this (or any other) web page in the Developer Tools > Elements tab, you'll see a nice tree structure - divs inside the body, h2's and p's inside the divs, etc. But look at the blog.css file - at the "blog posts" section, around line 136. Repetition! Selectors written over and over again! I can't stand it!</p>
+            <p>HTML has a natural tree structure, and CSS should too. It doesn't - but Sass does. Open scss/blog.scss and rewrite the section with the repeated selectors like so:</p>
+            <h3>Before Indentation</h3>
+            <pre><code>
+.blog-post {
+  margin-bottom: 60px; }
+
+.blog-post h2 {
+  margin-bottom: 5px;
+  font-size: 40px; }
+
+.blog-post p.meta {
+  margin-bottom: 20px;
+  color: #999; }
+            </code></pre>
+            <h3>After Indentation</h3>
+            <pre><code>
+.blog-post {
+  margin-bottom: 60px;
+
+  h2 {
+    margin-bottom: 5px;
+    font-size: 40px; }
+
+  p.meta {
+    margin-bottom: 20px;
+    color: #999; }
+}
+            </code></pre>
+            <p>Now refresh the browser again, and voila! Nothing has changed!</p>
+            <p>No, I mean literally nothing has changed. We edited the Sass file, but the HTML file isn't connected to Sass, it's connected to the CSS file. Regenerate that one again</p>
+            <code>node-sass scss/blog.scss css/blog.css</code>
+            <p>And there we go!</p>
+            <h3>Your Turn</h3>
+            <p>Take a moment and go through the same process with the .sidebar-module-inset directives starting on line 93.</p>
+          </div><!-- /.blog-post -->
+
+          <div class="blog-post">
+            <h2>Math</h2>
+            <p class="meta">No, I mean make the computer do math</p>
+            <p>There's a strange number in the CSS file:</p>
+            <code>line-height: 1.42857143;</code>
+            <p>It actually has a perfectly good reason for being there: The font is 14px, and with a line-height of 1.42857143, the line-height ends up with a nice round value of 20px, because 14 * 1.42857143 = 20 (almost exactly). But what if that font size changes? What are you supposed to do, open up a calculator utility or something? What are we, Neanderthals?</p>
+            <h3>Division? That's Sassy!</h3>
+            <p>Open scss/blog.scss and replace that line-height directive with something a bit clearer:</p>
+            <code>line-height: (20 / 14);</code>
+          </div>
+          <nav>
+            <ul class="pager">
+              <li><a href="index.html">Previous</a></li>
+              <li><a href="2-simplest-sass.html">Next</a></li>
+            </ul>
+          </nav>
+
+        </div><!-- /.blog-main -->
+
+        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+          <div class="sidebar-module sidebar-module-inset">
+            <h4>About</h4>
+            <p>This Crash Course is a free offering of The Iron Yard. <em>Taught with love</em>, as the kids say. I'm using the styling of the Bootstrap blog template, with actual content added that reflects the steps I'm demoing in front of you.</p>
+          </div>
+          <div class="sidebar-module">
+            <h4>Resources</h4>
+            <ol class="list-unstyled">
+              <li><a href="http://sass-lang.com/">Sass</a></li>
+              <li><a href="http://brew.sh">Homebrew</a></li>
+              <li><a href="http://caskroom.io">Homebrew Cask</a></li>
+              <li><a href="https://git-scm.com/">Git</a></li>
+              <li><a href="http://nodejs.org">Node.js</a></li>
+              <li><a href="https://www.npmjs.com/package/node-sass">node-sass</a></li>
+              <li><a href="http://bower.io/">Bower</a></li>
+              <li><a href="http://getbootstrap.com/">Bootstrap</a></li>
+              <li><a href="http://getbootstrap.com/examples/blog">Bootstrap Blog Template</a></li>
+              <li><a href="http://www.browsersync.io">Browsersync</a></li>
+              <li><a href="http://nodemon.io">nodemon</a></li>
+              <li><a href="http://ruby.bvision.com/blog/please-stop-embedding-bootstrap-classes-in-your-html">Bootstrap si; Bootstrap classes, no</a></li>
+              <li><a href="https://medium.com/@thisisbrianhan/watch-compile-your-sass-with-npm-9ba2b878415b">Make magic with npm</a></li>
+            </ol>
+          </div>
+          <div class="sidebar-module">
+            <h4>Social Media</h4>
+            <ol class="list-unstyled">
+              <li><a href="https://twitter.com/theironyard">Twitter</a></li>
+              <li><a href="https://twitter.com/susannajmiller">Our CD Uses Twitter Too</a></li>
+              <li><a href="https://www.facebook.com/The-Iron-Yard-Orlando-1527266594153803/">Facebook</a></li>
+            </ol>
+          </div>
+        </div><!-- /.blog-sidebar -->
+
+      </div><!-- /.row -->
+
+    </div><!-- /.container -->
+
+    <footer class="blog-footer">
+      <p>Blog template built for <a href="http://getbootstrap.com/">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+      <p>Content for the Sass Crash Course at <a href="http://theironyard.com/locations/orlando">The Iron Yard Orlando</a> by <a href="https://twitter.com/tweetwithbgates">Brian Gates</a>.</p>
+      <p>
+        <a href="#">Back to top</a>
+      </p>
+    </footer>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="./js/ie10-viewport-bug-workaround.js"></script>
+
+  </body>
+</html>

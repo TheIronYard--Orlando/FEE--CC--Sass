@@ -39,8 +39,8 @@
         <div class="col-sm-8 blog-main">
 
           <div class="blog-post">
-            <h2 class="blog-post-title">Setting Up</h2>
-            <p class="blog-post-meta">Installing things we'll need later</p>
+            <h2>Setting Up</h2>
+            <p class="meta">Installing things we'll need later</p>
             <p>There are several tools I'm going to rely on during this presentation. About half of them are tools to install the other tools. If you have these already, don't just rest on your laurels (if you even remembered to bring your laurels) - find someone who's installing things and offer a hand. If you are seeing these tools for the first time tonight, you're in for a treat - these goodies are going to save you hours, and let you do some really cool stuff!</p>
             <aside>
               <h3>A Note for Windows Users</h3>
@@ -48,7 +48,7 @@
             </aside>
             <hr>
             <h2>Homebrew</h2>
-            <p class="blog-post-meta">Because Apple didn't give us this functionality</p>
+            <p class="meta">Because Apple didn't give us this functionality</p>
             <p>We'll start with <a href="http://brew.sh">Homebrew</a>, a thing to install other things.</p>
             <aside>
               <p>More precisely, Homebrew is a <strong>package manager</strong> for OSX, which is used to install Unix tools and other open source software packages (though in conjunction with the next tool it can help with applications as well).</p>
@@ -59,21 +59,21 @@
             <code>brew -v</code>
             <hr>
             <h2>Homebrew Cask</h2>
-            <p class="blog-post-meta">Drag this</p>
+            <p class="meta">Drag this</p>
             <p><a href="http://caskroom.io">Homebrew Cask</a> is an installation manager for OSX. It makes installing applications fun! And by "fun" I mean "much less of a headache".</p>
             <code>brew install caskroom/cask/brew-cask</code>
             <p>Confirm</p>
             <code>brew cask --version</code>
             <hr>
             <h2>Git</h2>
-            <p class="blog-post-meta">'er done</p>
+            <p class="meta">'er done</p>
             <p>In general, using <a href="http://git-scm.com">Git</a> is right between flossing and wearing a seat belt on the list of Things You Should Be Doing (see <a href="http://www.makeuseof.com/tag/git-version-control-youre-developer/">here</a> for a quick rundown of why if you're not familiar with Git or version control). While we won't be using Git directly, some of the tools I'll describe use it under the hood, so we need to have it installed.
             <code>brew install git</code>
             <p>Confirm</p>
             <code>git -v</code>
             <hr>
             <h2>Node.js</h2>
-            <p class="blog-post-meta">"Why not put JavaScript on a server?" is apparently a question someone asked once</p>
+            <p class="meta">"Why not put JavaScript on a server?" is apparently a question someone asked once</p>
             <p>Node.js is a runtime environment for developing server-side web applications in JavaScript. Like everything connected to JavaScript, it has grown faster and farther from its original purposes than <a href="http://v011o.popscreen.com/clhOdHdfLVhBUFEx_o_mark-ruffalo-as-the-hulk---behind-the-scenes-of-the-.jpg">Mark Ruffalo in a gamma ray machine</a>, and JavaScript developers have used Node.js to power all sorts of tools, including packages that will watch for changes in Sass files, <a href="https://www.npmjs.com/package/node-sass">convert the Sass into CSS</a>, <a href="http://bower.io">manage front end code libraries</a>, and <a href="https://www.npmjs.com/package/makemeasandwich">order sandwiches</a>, all from the command line. Node.js has a modular architecture, and to assist in managing them all there is one module called node package manager (npm) which is installed as part of Node.js. Node/npm are a pretty big deal; <a href="http://www.npmjs.com">npmjs.com</a> lists 196,271 packages and over two billion downloads in the past month.</p>
             <h3>Installing Node.js</h3>
             <p>Node.js can be installed with Homebrew:</p>
@@ -83,7 +83,7 @@
               npm -v</code>
             <hr>
             <h2>Sass</h2>
-            <p class="blog-post-meta">Everything CSS should be</p>
+            <p class="meta">Everything CSS should be</p>
             <p>Of all the pieces of software I'm asking you to install, <a href="http://sass-lang.com">Sass</a> is the most important for this course. Sass was originally written in the lovely and beguiling language of Ruby. Unfortunately, while Ruby is fast (and delightful) to work in, it runs pretty slow. Fortunately, Sass has been rewritten in C++, and even better there's a wrapper for the C++ version available as a node package. </p>
             <aside>
               <h4>Cloud 9 Users Start Here</h4>
@@ -97,7 +97,7 @@
             <code>npm ls --depth=0</code>
             <hr>
             <h2>The project files</h2>
-            <p class="blog-post-meta">Back in my day, students had to type everything themselves. We spoil you.</p>
+            <p class="meta">Back in my day, students had to type everything themselves. We spoil you.</p>
             <p>You can get copies of the files I'm working on in two ways.</p>
             <ol>
               <li><strong>GitHub</strong>: If you have a Mac with all the above software installed, you can clone the repository at <a href="https://github.com/TheIronYard--Orlando/FEE--CC--Sass.git">https://github.com/TheIronYard--Orlando/FEE--CC--Sass.git</a>.</li>
